@@ -39,7 +39,7 @@ export const SignUp = () => {
             <form onSubmit={signupForm.handleSubmit}>
 
               <label htmlFor="">First Name</label>
-              {/* <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.firstname}</span> */}
+              <span style={{color: 'red', fontSize: '0.7em', marginLeft: 10}}>{signupForm.errors.firstname}</span>
               <input type="text" className='form-control mb-3 ' name='firstname' onChange={signupForm.handleChange} value={signupForm.values.firstname}/>
               <label htmlFor="">Last Name</label>
               <input type="text" className='form-control mb-3' name='lastname' onChange={signupForm.handleChange} value={signupForm.values.lastname} />
