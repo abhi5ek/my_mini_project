@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Login = () => {
   return (
-    <div className='d-flex justify-content-center'>
-        <div className='w-25'>
+    <div className='d-flex justify-content-center bgimg'>
+        <div className='w-25 '>
 
-          <div className='card signup-card text-white'>
+          <div className='card signup-card text-white mt-5'>
 
             <div className='card-body'>
             <div className='fs-2 fw-bold text-center'>LOGIN</div>

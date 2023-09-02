@@ -31,4 +31,15 @@ router.get('/getproject',(req,res) => {
     });
 })
 
+//delete project
+router.delete('/delproject/:id',(req,res) => {
+     Model.findByIdAndDelete(req.params.id)
+     .then((result) => {
+        res.json(result)
+     }).catch((err) => {
+        console.log(err)
+        res.status(500).json(err)
+     });
+});
+
 module.exports = router;
