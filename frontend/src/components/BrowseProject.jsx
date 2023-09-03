@@ -40,19 +40,39 @@ export const BrowseProject = () => {
     }
   }
 
+
   const viewUser = async (id) =>{
-    return ProjectList.map((project) => {
-      return <div className='col-md-4'>
+       
+    const res = await fetch('http://localhost:5000/project/viewproject/'+id);
+    console.log(res.status);
+    const data = await res.json();
+    // if(res.status===200){
+    //   fetchProjectData();
+    //   toast.success(data.name+'Deleted Successfully 😎🍔')  
+    // }
+       return <div className='col-md-4'>
                 <div className='card'>
+
+                <div className='m-auto h-50px'>
+                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={data.image} alt="Not Available" />
+                </div>
                       
                   <div className='card-body'>
+                    {
+                      <>
+                        <h4>{data.name}</h4>
+                        <h4>{data.technology}</h4>
+                        <h4>{data.days}</h4>
+                        <h4>{data.price}</h4>
+                      </>
+                      
+                    }
   
                   </div>
   
                 </div>
               </div>
 
-    });
   }
 
 
@@ -74,8 +94,14 @@ export const BrowseProject = () => {
                       {
                           <>
                             <h4>{project.name}</h4>
-                            <button onClick={ () => { deleteUser(project._id) }} className='btn btn-danger'>Delete</button>
-                            <button onClick={ () => { deleteUser(project._id) }} className='btn btn-primary ms-auto me-1'>view</button>
+                            <div className='row'>
+                              <div className='col'>
+                                  <button onClick={ () => { deleteUser(project._id) }} className='btn btn-danger'>Delete Project</button>
+                              </div>
+                              <div className='col d-flex m-auto me-0px'>
+                                  <button onClick={ () => { viewUser(project._id) }} className='btn btn-primary ms-auto me-1'>View Project</button>
+                              </div>
+                            </div>
                           </>
                         
                       }
@@ -127,7 +153,7 @@ export const BrowseProject = () => {
              {dispProjectData()}
            
           </div>
-          {/* <input onChange={searchProject} type="text" className='form-control form-control-lg' placeholder='Search Project Name...' /> */}
+          <input onChange={searchProject} type="text" className='form-control form-control-lg' placeholder='Search Project Name...' />
 
           </div>
     </div>

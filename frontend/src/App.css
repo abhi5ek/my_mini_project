@@ -87,8 +87,7 @@
   color: blue;
 }
 
-/* .card{
-  margin: auto;
-  height: 200px;
-  margin-bottom: 10px;
-} */
+.homebg{
+  background-color: slategray;
+}
+
