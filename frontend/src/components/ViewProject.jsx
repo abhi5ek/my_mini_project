@@ -15,9 +15,6 @@ export const ViewProject = () => {
     console.log(res.status);
     const data = await res.json();
     setProjectData(data);
-    // if(res.status===200){
-    //   fetchProjectData();
-    //   toast.success(data.name+'Deleted Successfully 😎🍔')  
     }
 
   
@@ -32,7 +29,7 @@ export const ViewProject = () => {
                 <div className='card'>
 
                 <div className='m-auto h-50px'>
-                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={projectData.avatar} alt="Not Available" />
+                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={'http://localhost:5000/'+projectData.avatar} alt="Not Available" />
                 </div>
                       
                   <div className='card-body'>
@@ -57,10 +54,8 @@ export const ViewProject = () => {
   return (
     <div className='bgimg pt-1'>
       <div className='container mt-5 '>
-
-        
+      {disp(id)}    
       </div>
-      {disp(id)}
     </div>
   )
 }

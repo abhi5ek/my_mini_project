@@ -16,7 +16,6 @@ export const BrowseProject = () => {
     const data = await res.json();
     console.log(data);
     setProjectList(data);
-    // setviewproject(data);
     setMasterList(data);
   };
 
@@ -88,6 +87,7 @@ export const BrowseProject = () => {
           </div>
 
           </div>
+          
     </div>
            
   )
