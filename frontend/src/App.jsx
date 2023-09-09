@@ -8,6 +8,7 @@ import { Home } from './components/Home';
 import { ProjectAdd } from './components/ProjectAdd';
 import { BrowseProject } from './components/BrowseProject';
 import { ViewProject } from './components/ViewProject';
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -15,6 +16,7 @@ function App() {
   return (
    <div>
     <BrowserRouter>
+    <Toaster position='top right' />
     <Navbar/>
 
     <Routes>

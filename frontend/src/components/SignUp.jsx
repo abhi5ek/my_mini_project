@@ -52,11 +52,12 @@ export const SignUp = () => {
   });
 
 
+
   return (
     <div className='d-flex justify-content-center bgimg'>
       <div className='col-md-3'>
 
-        <div className='card mt-5'>
+        <div className='card mt-5 mb-5'>
 
           <div className='card-body'>
 

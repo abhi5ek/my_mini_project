@@ -30,6 +30,8 @@ app.use('/product',productRouter);
 app.use('/project',projectRouter);
 app.use('/util',utilRouter);
 
+app.use(express.static('./uploads'))
+
 // routes
 app.get('/',(req, res) => {
     res.send('Response from express');

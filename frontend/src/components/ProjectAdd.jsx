@@ -1,17 +1,19 @@
 import { useFormik } from 'formik';
-import React from 'react'
+import React, { useState } from 'react'
 
 export const ProjectAdd = () => {
+
+    const [selImg, setSelImg] = useState("");
     const productForm = useFormik({
         initialValues:{
             name :"",
-            image:"",
             description:"",
             technology:"",
             days:"",
             price:""
         },
         onSubmit : async ( values ) => {
+            values.avatar = selImg;
             console.log(values);
       
             const res = await fetch('http://localhost:5000/project/addproject', {
@@ -25,10 +27,33 @@ export const ProjectAdd = () => {
         }
     });
 
+    
+  const uploadFile = async (e) => {
+    if (!e.target.files[0]) return;
+    const file = e.target.files[0];
+    setSelImg(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+
+    const res = await fetch("http://localhost:5000/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    });
+
+    console.log(res.status);
+
+    if (res.status === 200) {
+      console.log("File uploaded successfully");
+    } else {
+      console.log("File upload failed");
+    }
+  };
+
+
   return (
     <div className='d-flex justify-content-center bgimg'>
         <div className='col-md-3'>
-            <div className='card mt-5'>
+            <div className='card mt-5 mb-5'>
                 <div className='card-body text-uppercase'>
 
                 <div className='text-center fs-2 fw-bold'>ADD NEW PRODUCT</div>
@@ -39,7 +64,9 @@ export const ProjectAdd = () => {
                         <input type="text" className='form-control mb-3' name='name' onChange={productForm.handleChange} value={productForm.values.name} />
                         
                         <label htmlFor="">Project Image</label>
-                        <input type="file" className='form-control mb-3' name='image' onChange={productForm.handleChange} value={productForm.values.image} />
+                        <input type="file" className='form-control mb-3' onChange={uploadFile} />
+
+                        {/* <input type="file" className='form-control mb-3' name='avatar' onChange={productForm.handleChange} value={productForm.values.avatar} /> */}
 
                         <label htmlFor="">Project Technology</label>
                         <input type="text" className='form-control mb-3' name='technology' onChange={productForm.handleChange} value={productForm.values.technology} />

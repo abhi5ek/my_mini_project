@@ -5,7 +5,7 @@ const router = express.Router();
 
 //addproject
 router.post('/addproject',(req,res) => {
-    console.log(res.body);
+    console.log(req.body);
 
     new Model(req.body).save()
     .then((result) => {

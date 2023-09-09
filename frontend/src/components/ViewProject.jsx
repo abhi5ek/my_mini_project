@@ -1,50 +1,66 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 export const ViewProject = () => {
 
-  const [ProjectList, setProjectList] = useState([]);
-  const [viewproject, setviewproject] = useState([]);
+  const [projectData, setProjectData] = useState(null);
 
   const { id } = useParams();
 
  
 
-  const displayProjectData = () => {
-    return <table className='table table-dark'>
-      <thead>
-        <tr>
-          <th>PROJECT ID</th>
-          <th>PROJECT NAME</th>
-          <th>PROJECT DESCRIPTION</th>
-          <th>PROJECT TECHNOLOGY</th>
-          <th>ACTIONS</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          viewproject.map((project) =>
-          (<tr>
-            <td>{project._id}</td>
-            <td>{project.name}</td>
-            <td>{project.description}</td>
-            <td>{project.technology}</td>
+  const fetchProjectData = async (id) =>{
+       
+    const res = await fetch('http://localhost:5000/project/viewproject/'+id);
+    console.log(res.status);
+    const data = await res.json();
+    setProjectData(data);
+    // if(res.status===200){
+    //   fetchProjectData();
+    //   toast.success(data.name+'Deleted Successfully 😎🍔')  
+    }
 
+  
+    useEffect(() => {
+      fetchProjectData();
+    }, []);
+    
+    
+    const disp = () =>{
+      if(projectData!==null)
+       return <div className='col-md-4'>
+                <div className='card'>
 
-          </tr>))
-        }
-      </tbody>
-    </table>
-  }
+                <div className='m-auto h-50px'>
+                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={projectData.avatar} alt="Not Available" />
+                </div>
+                      
+                  <div className='card-body'>
+                    {
+                      <>
+                        <h4>{projectData.name}</h4>
+                        <h4>{projectData.technology}</h4>
+                        <h4>{projectData.days}</h4>
+                        <h4>{projectData.price}</h4>
+                      </>
+                      
+                    }
+  
+                  </div>
+  
+                </div>
+              </div>
+    }
+
+  
 
   return (
-    <div className='bgimg'>
+    <div className='bgimg pt-1'>
       <div className='container mt-5 '>
 
         
       </div>
-      viewimg
-      {displayProjectData}
+      {disp(id)}
     </div>
   )
 }

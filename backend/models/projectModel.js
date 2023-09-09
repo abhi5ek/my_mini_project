@@ -2,7 +2,7 @@ const {Schema, model} = require('../connections');
 
 const myschema = new Schema({
     name: String,
-    image: String,
+    avatar: String,
     description: String,
     technology: String,
     days: String,

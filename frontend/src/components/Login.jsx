@@ -5,7 +5,7 @@ export const Login = () => {
     <div className='d-flex justify-content-center bgimg'>
         <div className='w-25 '>
 
-          <div className='card signup-card text-white mt-5'>
+          <div className='card signup-card text-white mt-5 mb-5'>
 
             <div className='card-body'>
             <div className='fs-2 fw-bold text-center'>LOGIN</div>
