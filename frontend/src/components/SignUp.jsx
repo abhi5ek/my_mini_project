@@ -75,7 +75,7 @@ export const SignUp = () => {
             <hr />
               {/* <label htmlFor="">Name</label> */}
               <span style={{color: 'red', fontSize:'0.7rem', marginLeft: 10}}>{signupForm.errors.name}</span>
-              <input type="text" className='form-control mb-1 ' name='name' onChange={signupForm.handleChange} value={signupForm.values.name} placeholder='Name'/>
+              <input type="text" className=' form-control mb-1 ' name='name' onChange={signupForm.handleChange} value={signupForm.values.name} placeholder='Name'/>
               {/* <label htmlFor="">Email</label> */}
               <span style={{color: 'red', fontSize:'0.7rem', marginLeft: 10}}>{signupForm.errors.email}</span>
               <input type="email" className='form-control mb-1' name='email' onChange={signupForm.handleChange} value={signupForm.values.email} placeholder='Email'/>

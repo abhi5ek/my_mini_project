@@ -57,10 +57,10 @@ export const BrowseProject = () => {
                             <h4>{project.name}</h4>
                             <div className='row'>
                               <div className='col'>
-                                  <button onClick={ () => { deleteUser(project._id) }} className='btn btn-danger'>Delete Project</button>
+                                  <button onClick={ () => { deleteUser(project._id) }} className='btn btn-danger view-btn'>Delete Project</button>
                               </div>
-                              <div className='col d-flex m-auto me-0px'>
-                                  <NavLink to={'/viewproject/'+project._id} className='btn btn-primary ms-auto me-1'>View Project</NavLink>
+                              <div className='col d-flex m-auto me-0px '>
+                                  <NavLink to={'/viewproject/'+project._id} className='btn btn-primary ms-auto me-1 view-btn'>View Project</NavLink>
                               </div>
                             </div>
                           </>

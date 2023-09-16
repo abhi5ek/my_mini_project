@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbgcolor">
       <div className="container">
         <a className="navbar-brand" href="#">
-            <div className='name'>
+            <div className='logo'>
               FreelancerHub
             </div> 
         </a>
@@ -40,23 +40,17 @@ const Navbar = () => {
                 Browse Project
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="viewproject">
-                View Project
-              </NavLink>
-            </li>
 
           </ul>
-          <ul className="navbar-nav mx-auto me-2 mb-lg-0 navtext ">
-            
-            <li className="nav-item navtext ">
-              <button className='btn btn-success'>
-              <NavLink className="nav-link text-white" to="/signup">
+          <ul className="navbar-nav mx-auto me-2 navtext ">
+
+            <li className="nav-item navtext">
+              <button className='btn btn-success' >
+              <NavLink className="nav-link" to="signup">
                 Sign Up
               </NavLink>
               </button>
             </li>
-
             <li className="nav-item navtext">
               <button className='btn' >
               <NavLink className="nav-link" to="login">

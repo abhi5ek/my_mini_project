@@ -53,10 +53,10 @@ export const ProjectAdd = () => {
   return (
     <div className='d-flex justify-content-center bgimg'>
         <div className='col-md-3'>
-            <div className='card mt-5 mb-5'>
-                <div className='card-body text-uppercase'>
+            <div className='card mt-5 mb-5 signup-card'>
+                <div className='card-body text-uppercase text-white '>
 
-                <div className='text-center fs-2 fw-bold'>ADD NEW PRODUCT</div>
+                <div className='text-center fs-2 fw-bold'>ADD NEW PROJECT</div>
                 <hr />
 
                     <form onSubmit={productForm.handleSubmit}>
@@ -79,7 +79,7 @@ export const ProjectAdd = () => {
                        
             
 
-                        <button type='submit' className='btn btn-primary w-100'>Submit</button>
+                        <button type='submit' className='btn btn-primary w-100'>ADD PROJECT</button>
                     </form>
                 </div>
             </div>
