@@ -62,7 +62,7 @@ export const SignUp = () => {
           <div className='card-body'>
 
 
-            <form onSubmit={signupForm.handleSubmit}>
+            <form action='' onSubmit={signupForm.handleSubmit}>
             <div className='text-center name-signup mb-3'>FreelancerHub</div>
             <div className='text-center fs-5 fw-bold mb-4'>Sign Up</div>
             <div className='text-center'>
