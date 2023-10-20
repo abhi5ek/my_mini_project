@@ -1,10 +1,12 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbgcolor">
       <div className="container">
+        <Fade top>
         <a className="navbar-brand" href="#">
             <div className='logo'>
               FreelancerHub
@@ -61,6 +63,7 @@ const Navbar = () => {
 
           </ul>
         </div>
+        </Fade>
       </div>
 
     </nav>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Zoom from 'react-reveal/Zoom'
 import {useFormik, validateYupSchema} from 'formik'
 import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
@@ -55,6 +56,7 @@ export const SignUp = () => {
 
   return (
     <div className='d-flex justify-content-center bgimg'>
+      <Zoom>
       <div className='col-md-3'>
 
         <div className='card mt-5 mb-5'>
@@ -100,6 +102,7 @@ export const SignUp = () => {
         </div>
 
       </div>
+      </Zoom>
     </div>
   )
 }
