@@ -83,10 +83,7 @@ export const SignUp = () => {
               <span style={{color: 'red', fontSize:'0.7rem', marginLeft: 10}}>{signupForm.errors.password}</span>
               <input height={'150'} type="password" className='form-control mb-1' name='password' onChange={signupForm.handleChange} value={signupForm.values.password} placeholder='Password' />
               
-              {/* <div>
-               <p className='fs-6 '> <input type="checkbox"/> I agree to the FreelancerHub <a href="">User Agreement</a> and <a href=''>Privacy Policy</a> </p>
-              </div> */}
-
+              
               <button type='submit' className='btn navbgcolor my-submit text-white w-100 mt-2 fs-5 fw-bold'>Join FreelencerHub</button>
 
             </form>

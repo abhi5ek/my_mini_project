@@ -1,4 +1,6 @@
 import React from 'react'
+import React from 'react';
+import Fade from 'react-reveal/Fade'
 import { NavLink } from 'react-router-dom'
 
 export const Home = () => {
@@ -8,7 +10,7 @@ export const Home = () => {
     <div className='bgimg '>
     <div className='container pt-5 pb-5'>
     
-      <div>
+      <Fade left>
         <div className='fw-bold fs-1'>
           
             Hire the Best <br /> Freelancers for any job <br /> Online
@@ -22,7 +24,7 @@ export const Home = () => {
             <li>Pay only when you're 100% happy</li>
           </ul>
         </div>
-      </div>
+      </Fade>
 
       <div className='mt-5'>
 
