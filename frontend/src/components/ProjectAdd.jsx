@@ -12,7 +12,7 @@ export const ProjectAdd = () => {
             days:"",
             price:""
         },
-        onSubmit : async ( values ) => {
+        onSubmit : async ( values,{ resetForm, setSubmitting } ) => {
             values.avatar = selImg;
             console.log(values);
       

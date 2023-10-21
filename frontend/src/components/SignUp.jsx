@@ -13,6 +13,7 @@ const SignupSchema = Yup.object().shape({
 });
 
 export const SignUp = () => {
+  const navigate = useNavigate();
   
   const signupForm = useFormik({
 
@@ -22,9 +23,8 @@ export const SignUp = () => {
       password: ""
     },
 
-    onSubmit : async (values,{resetForm}) => {
+    onSubmit : async (values,{ resetForm, setSubmitting }) => {
       console.log(values);
-      // return;
       
       const res = await fetch('http://localhost:5000/user/add', {
         method: 'POST',
@@ -40,7 +40,7 @@ export const SignUp = () => {
           title : 'WellDone!',
           text : 'Registered Successfully 😎'
         })
-        // navigate('/login');
+         navigate('/login');
       }else{
         Swal.fire({
           icon : 'error',
