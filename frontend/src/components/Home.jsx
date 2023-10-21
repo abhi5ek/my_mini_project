@@ -58,7 +58,7 @@ export const Home = () => {
 
     <div className='homebg'>
         <div className='container pt-5 '>
-          <div className='mt-5'>
+          <div className='mt-2'>
             <h1 className='fs-1 fw-bold '>need something done?</h1>
           </div>
 
