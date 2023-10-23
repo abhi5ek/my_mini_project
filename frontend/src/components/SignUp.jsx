@@ -23,8 +23,9 @@ export const SignUp = () => {
       password: ""
     },
 
-    onSubmit : async (values,{ resetForm, setSubmitting }) => {
+    onSubmit : async (values,{setSubmitting }) => {
       console.log(values);
+      setSubmitting(true);
       
       const res = await fetch('http://localhost:5000/user/add', {
         method: 'POST',
@@ -34,22 +35,25 @@ export const SignUp = () => {
         }
       });
       console.log(res.status);
-      if(res.status === 200){
+      setSubmitting(false);
+  
+      if(res.status===200){
         Swal.fire({
-          icon : 'success',
-          title : 'WellDone!',
-          text : 'Registered Successfully 😎'
+          icon: 'success',
+          title: 'Success',
+          text: 'Registered Successfully!!',
         })
-         navigate('/login');
-      }else{
+        navigate("/login");
+      }
+      else{
         Swal.fire({
-          icon : 'error',
-          title : 'Oops!',
-          text : 'Something went wrong'
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
         })
       }
     },
-    validationSchema : SignupSchema
+    validationSchema : SignupSchema,
   });
 
 
@@ -87,7 +91,7 @@ export const SignUp = () => {
               <input height={'150'} type="password" className='form-control mb-1' name='password' onChange={signupForm.handleChange} value={signupForm.values.password} placeholder='Password' />
               
               
-              <button type='submit' className='btn navbgcolor my-submit text-white w-100 mt-2 fs-5 fw-bold'>Join FreelencerHub</button>
+              <button disabled={signupForm.isSubmitting} className='btn navbgcolor my-submit text-white w-100 mt-2 fs-5 fw-bold'>Join FreelencerHub</button>
 
             </form>
              <hr />

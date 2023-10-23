@@ -1,7 +1,12 @@
 import { useFormik } from 'formik';
 import React, { useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
 
 export const ProjectAdd = () => {
+
+  const navigate = useNavigate();
 
     const [selImg, setSelImg] = useState("");
     const productForm = useFormik({
@@ -24,6 +29,20 @@ export const ProjectAdd = () => {
               }
             });
             console.log(res.status);
+            if(res.status === 200){
+              Swal.fire({
+                icon : 'success',
+                title : 'WellDone!',
+                text : 'Project Added Successfully 😎'
+              })
+               navigate('/browseproject');
+            }else{
+              Swal.fire({
+                icon : 'error',
+                title : 'Oops!',
+                text : 'Something went wrong'
+              })
+            }
         }
     });
 

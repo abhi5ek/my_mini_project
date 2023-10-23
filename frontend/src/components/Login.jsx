@@ -30,31 +30,32 @@ export const Login = () => {
       });   
 
       console.log(res.status);
-
+      
       if(res.status === 200){
         Swal.fire({
           icon : 'success',
           title :'Nice',
           text : 'Logged in Successfully'
         });
+        navigate("/home")
         
         const data = await res.json();
         sessionStorage.setItem('user',JSON.stringify(data));
 
       }else if(res.status === 401){
         Swal.fire({
-          icon : 'success',
-          title :'Success',
-          text : 'logged In successfully'
-        })
-       navigate('/home');
-      }else{
-        Swal.fire({
           icon : 'error',
           title :'Error',
           text : 'Email or Password is incorrect'
         })
+      }else{
+        Swal.fire({
+          icon : 'error',
+          title :'Error',
+          text : 'Something went Wrong'
+        })
       }
+
 
       // write code to submit form to server
     },
