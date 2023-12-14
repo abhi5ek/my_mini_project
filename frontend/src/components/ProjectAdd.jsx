@@ -80,22 +80,22 @@ export const ProjectAdd = () => {
                 <hr />
 
                     <form onSubmit={productForm.handleSubmit}>
-                        <label htmlFor="">Project Name</label>
-                        <input type="text" className='form-control mb-3' name='name' onChange={productForm.handleChange} value={productForm.values.name} />
+                        {/* <label htmlFor="">Project Name</label> */}
+                        <input type="text" className='form-control mb-3' name='name' onChange={productForm.handleChange} value={productForm.values.name} placeholder='NAME' />
                         
-                        <label htmlFor="">Project Image</label>
+                        {/* <label htmlFor="">Project Image</label> */}
                         <input type="file" className='form-control mb-3' onChange={uploadFile} />
 
                         {/* <input type="file" className='form-control mb-3' name='avatar' onChange={productForm.handleChange} value={productForm.values.avatar} /> */}
 
-                        <label htmlFor="">Project Technology</label>
-                        <input type="text" className='form-control mb-3' name='technology' onChange={productForm.handleChange} value={productForm.values.technology} />
+                        {/* <label htmlFor="">Project Technology</label> */}
+                        <input type="text" className='form-control mb-3' name='technology' onChange={productForm.handleChange} value={productForm.values.technology} placeholder='TECHNOLOGY' />
                        
-                        <label htmlFor="">Project Days</label>
-                        <input type="text" className='form-control mb-3' name='days' onChange={productForm.handleChange} value={productForm.values.days} />
+                        {/* <label htmlFor="">Project Days</label> */}
+                        <input type="text" className='form-control mb-3' name='days' onChange={productForm.handleChange} value={productForm.values.days} placeholder='DAYS' />
                        
-                        <label htmlFor="">Project Price</label>
-                        <input type="text" className='form-control mb-3' name='price' onChange={productForm.handleChange} value={productForm.values.price} />
+                        {/* <label htmlFor="">Project Price</label> */}
+                        <input type="text" className='form-control mb-3' name='price' onChange={productForm.handleChange} value={productForm.values.price} placeholder='PRICE' />
                        
             
 

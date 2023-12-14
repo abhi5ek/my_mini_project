@@ -75,15 +75,17 @@ export const Login = () => {
             <hr />
 
               <form onSubmit={loginform.handleSubmit}>
-                <label htmlFor="">EMAIL</label>
+                {/* <label htmlFor="">EMAIL</label> */}
                 <span style={{color: 'red', fontSize:'0.7rem', marginLeft: 10}}>{loginform.errors.email}</span>
-                <input type="email" className="form-control mb-3" name="email" onChange={loginform.handleChange} value={loginform.values.email}/>
+                <input type="email" className="form-control mb-3" name="email" onChange={loginform.handleChange} value={loginform.values.email} placeholder='NAME'/>
 
-                <label htmlFor="">PASSWORD</label>
+                {/* <label htmlFor="">PASSWORD</label> */}
                 <span style={{color: 'red', fontSize:'0.7rem', marginLeft: 10}}>{loginform.errors.password}</span>
-                <input type="password" className="form-control mb-3" name="password" onChange={loginform.handleChange} value={loginform.values.password} />
+                <input type="password" className="form-control mb-3" name="password" onChange={loginform.handleChange} value={loginform.values.password} placeholder='PASSWORD' />
 
                  <button className='btn navbgcolor text-white mt-3'>LOGIN</button>
+                 <br />
+                <p className='text-center'>Don't have an account?<a href="signup">signup</a> </p> 
               </form>
 
             </div>

@@ -9,6 +9,7 @@ import { ProjectAdd } from './components/ProjectAdd';
 import { BrowseProject } from './components/BrowseProject';
 import { ViewProject } from './components/ViewProject';
 import { Toaster } from 'react-hot-toast';
+import Home2 from './components/Home2';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route element={ <ProjectAdd/>} path='projectadd'/>
       <Route element={ <BrowseProject/>} path='browseproject'/>
       <Route element={ <ViewProject/>} path='viewproject/:id'/>
+      <Route element={ <Home2/>} path='home2'/>
   
       
 

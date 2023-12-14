@@ -24,13 +24,18 @@ const Navbar = () => {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto ms-2 mb-lg-0 navtext ">
+          <ul className="navbar-nav mx-auto ms-2 mb-lg-0 ">
            
-            <li className="nav-item navtext">
+            <li className="nav-item">
               <NavLink className="nav-link" to="/home">
                 Home
               </NavLink>
             </li>
+            {/* <li className="nav-item">
+              <NavLink className="nav-link" to="/home2">
+                Home2
+              </NavLink>
+            </li> */}
             
             <li className="nav-item">
               <NavLink className="nav-link" to="projectadd">
@@ -44,7 +49,7 @@ const Navbar = () => {
             </li>
 
           </ul>
-          <ul className="navbar-nav mx-auto me-2 navtext ">
+          <ul className="navbar-nav mx-auto me-2 ">
 
             <li className="nav-item navtext">
               <button className='btn btn-success' >
@@ -53,7 +58,7 @@ const Navbar = () => {
               </NavLink>
               </button>
             </li>
-            <li className="nav-item navtext">
+            <li className="nav-item">
               <button className='btn' >
               <NavLink className="nav-link" to="login">
                 Login
