@@ -1,6 +1,6 @@
 const mongoose =require('mongoose');
 
-const url ="mongodb+srv://Abhi5ek:Abhishek123@abhi5ek.g1jiidh.mongodb.net/myDB?retryWrites=true&w=majority";
+const url =process.env.MONGO_URI;
 
 // asynchrounous function
 mongoose.connect(url)
