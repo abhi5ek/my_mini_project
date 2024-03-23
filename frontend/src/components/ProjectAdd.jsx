@@ -21,7 +21,7 @@ export const ProjectAdd = () => {
             values.avatar = selImg;
             console.log(values);
       
-            const res = await fetch('http://localhost:5000/project/addproject', {
+            const res = await fetch('https://my-mini-project.onrender.com/project/addproject', {
               method: 'POST',
               body: JSON.stringify(values),
               headers: {
@@ -54,7 +54,7 @@ export const ProjectAdd = () => {
     const fd = new FormData();
     fd.append("myfile", file);
 
-    const res = await fetch("http://localhost:5000/util/uploadfile", {
+    const res = await fetch("https://my-mini-project.onrender.com/uploadfile", {
       method: "POST",
       body: fd,
     });

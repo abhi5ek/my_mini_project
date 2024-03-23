@@ -21,7 +21,7 @@ export const Login = () => {
     onSubmit : async ( values ) => { 
       console.log(values) ;
 
-      const res = await fetch('http://localhost:5000/user/authenticate',{
+      const res = await fetch('https://my-mini-project.onrender.com/user/authenticate',{
         method: 'POST',
         body: JSON.stringify(values),
         headers:{
@@ -29,7 +29,7 @@ export const Login = () => {
         }
       });   
 
-      console.log(res.status);
+      console.log(res.status); 
       
       if(res.status === 200){
         Swal.fire({

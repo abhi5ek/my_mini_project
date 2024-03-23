@@ -13,7 +13,7 @@ export const ViewProject = () => {
 
   const fetchProjectData = async () =>{
        
-    const res = await fetch('http://localhost:5000/project/viewproject/'+id);
+    const res = await fetch('https://my-mini-project.onrender.com/project/viewproject/'+id);
     console.log(res.status);
     const data = await res.json();
     setProjectData(data);
@@ -31,7 +31,7 @@ export const ViewProject = () => {
                 <div className='card'>
 
                 <div className='m-auto h-50px mt-3'>
-                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={'http://localhost:5000/'+projectData.avatar} alt="Not Available" />
+                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={'https://my-mini-project.onrender.com/'+projectData.avatar} alt="Not Available" />
                 </div>
                       
                   <div className='card-body text-uppercase'>

@@ -27,7 +27,7 @@ export const SignUp = () => {
       console.log(values);
       setSubmitting(true);
       
-      const res = await fetch('http://localhost:5000/user/add', {
+      const res = await fetch('https://my-mini-project.onrender.com/user/add', {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {

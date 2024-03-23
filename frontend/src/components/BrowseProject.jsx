@@ -11,7 +11,7 @@ export const BrowseProject = () => {
   const [masterList, setMasterList] = useState([]);
 
   const fetchProjectData = async () => {
-    const res = await fetch('http://localhost:5000/project/getproject ');
+    const res = await fetch('https://my-mini-project.onrender.com/project/getproject ');
     console.log(res.status);
 
     const data = await res.json();
@@ -28,7 +28,7 @@ export const BrowseProject = () => {
   }
 
   const deleteUser = async (id) => {
-    const res = await fetch('http://localhost:5000/project/delproject/'+id,{method:'DELETE'});
+    const res = await fetch('https://my-mini-project.onrender.com/project/delproject/'+id,{method:'DELETE'});
     console.log(res.status);
     const data = await res.json();
     if(res.status===200){
@@ -49,7 +49,7 @@ export const BrowseProject = () => {
                   <div className='card mb-4'>
 
                   <div className='m-auto h-50px mt-3'>
-                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={'http://localhost:5000/'+project.avatar} alt="Not Available" />
+                    <img style={{height:'200px' , objectFit:'cover'}} className='card-img-top' src={'https://my-mini-project.onrender.com/'+project.avatar} alt="Not Available" />
                     </div>
 
                   <div className='card-body'>
