@@ -11,7 +11,7 @@ const productRouter = require('./routers/productRouter');
 const projectRouter = require('./routers/projectRouter');
 const utilRouter = require('./routers/util');
 
-const cors = require('cors');
+// const cors = require('cors');
 
 
 //intialize express app
