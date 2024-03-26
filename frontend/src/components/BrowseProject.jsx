@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Slide from 'react-reveal/Slide';
 import { toast } from 'react-hot-toast';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 export const BrowseProject = () => {
 
