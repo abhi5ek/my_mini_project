@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Fade from 'react-reveal/Fade'
-import Bounce from 'react-reveal/Bounce'
+// import Fade from 'react-reveal/Fade'
+// import Bounce from 'react-reveal/Bounce'
 
 export const Home = () => {
   return (
@@ -12,11 +12,11 @@ export const Home = () => {
     
       <div>
 
-          <Fade>
+          {/* <Fade> */}
             <h1 className='fw-bold'>
             Hire the Best <br /> Freelancers for any job <br /> Online
             </h1>
-          </Fade>
+          {/* </Fade> */}
           
         <div className='mt-5'>
           <ul className='fs-4'>
@@ -33,18 +33,18 @@ export const Home = () => {
       <div>
         <button className='btnn text-white'>
         <NavLink className="nav-link btnn fs-5" to="/signup">
-          <Bounce>
+          {/* <Bounce> */}
             Hire a freelancer
-          </Bounce>
+          {/* </Bounce> */}
           </NavLink>
         </button>
         <button className='btnn ms-5 text-white'>
         <NavLink className="nav-link btnn fs-5" to="/projectadd">
-          <Bounce>
+          {/* <Bounce> */}
 
             Add project
             
-          </Bounce>
+          {/* </Bounce> */}
           </NavLink>
         </button>
       </div >

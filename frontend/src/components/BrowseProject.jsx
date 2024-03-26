@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Slide from 'react-reveal/Slide';
+// import Slide from 'react-reveal/Slide';
 import { toast } from 'react-hot-toast';
 import {  NavLink } from 'react-router-dom';
 
@@ -83,11 +83,11 @@ export const BrowseProject = () => {
           <h1 className='fs-2 fw-bold'>PROJECT INFO</h1>
           <hr/>
           <input onChange={searchProject} type="text" className='form-control form-control-lg mb-3' placeholder='Search Project Name...' />
-          <Slide bottom>
+          {/* <Slide bottom> */}
           <div className='row'>
              {dispProjectData()}
           </div>
-          </Slide>
+          {/* </Slide> */}
 
           </div>
           
